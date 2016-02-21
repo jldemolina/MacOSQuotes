@@ -14,6 +14,7 @@
 		823D28D31C792FC700B0C018 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823D28CC1C792FC700B0C018 /* Quote.swift */; };
 		823D28D41C792FC700B0C018 /* QuotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823D28CD1C792FC700B0C018 /* QuotesViewController.swift */; };
 		823D28D51C792FC700B0C018 /* QuotesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 823D28CE1C792FC700B0C018 /* QuotesViewController.xib */; };
+		823D28E11C7937A200B0C018 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823D28E01C7937A200B0C018 /* EventMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		823D28CC1C792FC700B0C018 /* Quote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 		823D28CD1C792FC700B0C018 /* QuotesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuotesViewController.swift; sourceTree = "<group>"; };
 		823D28CE1C792FC700B0C018 /* QuotesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuotesViewController.xib; sourceTree = "<group>"; };
+		823D28E01C7937A200B0C018 /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				823D28CC1C792FC700B0C018 /* Quote.swift */,
 				823D28CD1C792FC700B0C018 /* QuotesViewController.swift */,
 				823D28CE1C792FC700B0C018 /* QuotesViewController.xib */,
+				823D28E01C7937A200B0C018 /* EventMonitor.swift */,
 			);
 			path = Quotes;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				823D28D31C792FC700B0C018 /* Quote.swift in Sources */,
 				823D28D41C792FC700B0C018 /* QuotesViewController.swift in Sources */,
 				823D28CF1C792FC700B0C018 /* AppDelegate.swift in Sources */,
+				823D28E11C7937A200B0C018 /* EventMonitor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

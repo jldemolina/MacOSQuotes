@@ -15,6 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(-2);
     let popover = NSPopover()
+    var eventMonitor: EventMonitor?
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         if let button = statusItem.button {
@@ -22,6 +23,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             button.action = Selector("togglePopover:")
         }
         popover.contentViewController = QuotesViewController(nibName: "QuotesViewController", bundle: nil)
+        initEventMonitor();
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -32,10 +34,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if let button = statusItem.button {
             popover.showRelativeToRect(button.bounds, ofView: button, preferredEdge: NSRectEdge.MinY)
         }
+        eventMonitor?.start()
     }
     
     func closePopover(sender: AnyObject?) {
         popover.performClose(sender)
+        eventMonitor?.stop()
     }
     
     func togglePopover(sender: AnyObject?) {
@@ -44,6 +48,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         } else {
             showPopover(sender)
         }
+    }
+    
+    func initEventMonitor() {
+        eventMonitor = EventMonitor(mask: NSEventMask.LeftMouseDownMask.union(NSEventMask.RightMouseDownMask)) { [unowned self] event in
+            if self.popover.shown {
+                self.closePopover(event)
+            }
+        }
+        eventMonitor?.start()
     }
 
 
